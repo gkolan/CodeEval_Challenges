@@ -5,13 +5,13 @@
 $serialized_array = []
 $filtered_array = [] 
 $count = 2
-def pass_triangle value
+def passTriangle value
     return [] if value.empty?
 	content_array = value.split(" ")
 	$serialized_array << content_array
 end
 File.open(ARGV[0]).each_line do |line|
-    pass_triangle(line)
+    passTriangle(line)
 end
 $filtered_array << $serialized_array[0][0]
 arry = $serialized_array[1]
